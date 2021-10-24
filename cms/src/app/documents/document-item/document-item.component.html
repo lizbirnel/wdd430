@@ -1,3 +1,10 @@
-<a class="list-group-item clearfix documentDiv" (click)="onSelectedDocument()">
-  {{ document.name }}<!-- Display document name here -->
+<a
+  style="cursor: pointer"
+  [routerLink]="[document.id]"
+  routerLinkActive="active"
+  class="list-group-item clearfix documentDiv"
+  (click)="onSelectedDocument()"
+>
+  {{ document.name
+  }}<!-- Display document name here -->
 </a>
