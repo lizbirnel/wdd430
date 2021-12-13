@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Add/Edit Movie</h2>
+      <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input
+                type="text"
+                id="title"
+                formControlName="title"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="imageUrl">Image URL</label>
+              <input
+                type="text"
+                id="imageUrl"
+                formControlName="imageUrl"
+                class="form-control"
+                #imageUrl
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <img [src]="imageUrl.value" class="img-responsive movieImg" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                type="text"
+                id="description"
+                class="form-control"
+                formControlName="description"
+                rows="6"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 btn-container">
+            <button
+              type="submit"
+              class="btn btn-success"
+              [disabled]="!movieForm.valid"
+            >
+              Save
+            </button>
+            <button type="button" class="btn btn-danger" (click)="onCancel()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

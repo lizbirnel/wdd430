@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Movie Library</h1>
+  <p>
+    Browse to see what is in the library, or click the New Movie button to add
+    new movies to your library below.
+  </p>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onNewMovie()">New Movie</button>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <h2>Movies</h2>
+    <p>Click a movie to see the details.</p>
+    <div class="col-xs-12">
+      <app-movie-item
+        *ngFor="let movieEl of movies; let i = index"
+        [movie]="movieEl"
+        [index]="i"
+      ></app-movie-item>
+    </div>
+  </div>
+</div>

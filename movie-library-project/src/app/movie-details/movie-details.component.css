@@ -1,0 +1,19 @@
+h4 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+span {
+    max-height: 150px;
+}
+
+.movieImg {
+  width: 25%;
+  min-width: 200px;
+  height: auto;
+  
+}
+
+.img-responsive {
+  max-height: none;
+}

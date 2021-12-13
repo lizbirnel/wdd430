@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <a routerLink="/" class="btn btn-success movieLibrary">Back</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <span class="pull-right">
+        <img
+          [src]="movie.imageUrl"
+          alt="{{ movie.title }}"
+          class="img-responsive movieImg"
+        />
+      </span>
+    </div>
+  </div>
+  <div class="row title">
+    <div class="col-xs-12">
+      <h1>{{ movie.title }}</h1>
+    </div>
+  </div>
+  <div class="row description">
+    <div class="col-xs-12">
+      <h2>Description:</h2>
+      <p>{{ movie.description }}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="cursor: pointer"
+        (click)="onEditMovie()"
+      >
+        Edit Movie
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        style="cursor: pointer"
+        (click)="onDeleteMovie()"
+      >
+        Delete Movie
+      </button>
+    </div>
+  </div>
+</div>
+<!-- <div class="pull-left">
+  <h4 class="list-group-item-heading">{{ movie.title }}</h4>
+</div>
+<span class="pull-right">
+  <img
+    [src]="movie.imageUrl"
+    alt="{{ movie.title }}"
+    class="img-responsive movieImg"
+  />
+</span> -->
